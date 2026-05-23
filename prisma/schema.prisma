@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  name        String
+  description String
+  icon        String
+  sortOrder   Int       @default(0)
+  services    Service[]
+  leads       Lead[]
+  createdAt   DateTime  @default(now())
+}
+
+model Provider {
+  id              String    @id @default(cuid())
+  fullName        String
+  businessName    String?
+  primaryCategory String
+  subcategories   String    @default("[]")
+  city            String
+  region          String
+  languages       String    @default("[]")
+  yearsExperience Int
+  bio             String
+  credentials     String?
+  websiteUrl      String?
+  socialLinks     String?
+  contactEmail    String
+  contactPhone    String?
+  status          String    @default("pending")
+  internalNotes   String?
+  services        Service[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Service {
+  id           String    @id @default(cuid())
+  provider     Provider  @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  providerId   String
+  title        String
+  categorySlug String
+  category     Category? @relation(fields: [categorySlug], references: [slug])
+  description  String
+  priceRange   String
+  duration     String?
+  createdAt    DateTime  @default(now())
+}
+
+model Lead {
+  id           String    @id @default(cuid())
+  name         String
+  email        String
+  phone        String?
+  categorySlug String?
+  category     Category? @relation(fields: [categorySlug], references: [slug])
+  message      String
+  budget       String?
+  status       String    @default("new")
+  createdAt    DateTime  @default(now())
+}

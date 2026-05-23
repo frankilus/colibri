@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand palette */
+  --color-emerald-deep: #0F4C45;
+  --color-ink: #1C2B2A;
+  --color-emerald-brand: #1FA37A;
+  --color-violet: #7C3AED;
+  --color-magenta: #B5388A;
+  --color-cyan: #36C5C0;
+  --color-gold: #F4B740;
+  --color-cream: #FBF7EF;
+  --color-sand: #F2EBD9;
+  --color-white: #FFFFFF;
+
+  /* Semantic aliases */
+  --color-primary: var(--color-emerald-deep);
+  --color-primary-light: var(--color-emerald-brand);
+  --color-accent: var(--color-gold);
+  --color-text: var(--color-ink);
+  --color-bg: var(--color-cream);
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
+
+/* Focus visible ring */
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Hummingbird float animation */
+@keyframes hb-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes hb-wingbeat {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.85); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-float {
+  animation: hb-float 3s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-fade-up,
+  .animate-fade-in {
+    animation: none;
+  }
+}
+
+/* Iridescent gradient — hero / logo only */
+.gradient-iridescent {
+  background: linear-gradient(135deg, #1FA37A 0%, #36C5C0 30%, #7C3AED 65%, #B5388A 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(160deg, #0F4C45 0%, #1C2B2A 60%, #0F4C45 100%);
+}
+
+/* Custom prose link style */
+a.link-brand {
+  color: var(--color-emerald-brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
