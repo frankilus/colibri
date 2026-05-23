@@ -48,7 +48,15 @@ export default function Hero() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
               Your bridge to{" "}
-              <span className="gradient-iridescent bg-clip-text text-transparent">
+              <span
+                style={{
+                  backgroundImage:
+                    "linear-gradient(135deg, #1FA37A 0%, #36C5C0 35%, #7C3AED 70%, #B5388A 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
                 trusted Colombia
               </span>
               .
