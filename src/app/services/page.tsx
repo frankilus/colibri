@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { CATEGORIES, SITE } from "@/lib/config";
 import prisma from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Services",
   description: `Browse all service categories available through ${SITE.displayName}. Health, wellness, experiences, personal services, and more.`,

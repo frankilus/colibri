@@ -10,9 +10,7 @@ interface Props {
   params: Promise<{ category: string }>;
 }
 
-export async function generateStaticParams() {
-  return CATEGORIES.map((c) => ({ category: c.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
