@@ -71,9 +71,9 @@ export default function Hero() {
               transition={{ duration: 0.65, delay: 0.2 }}
               className="text-lg text-white/75 mb-8 max-w-lg leading-relaxed"
             >
-              Colibri connects you with a vetted network of Colombian dentists,
-              wellness providers, experience guides, and personal services —
-              coordinating everything so you can focus on results, not logistics.
+              Whether it&apos;s a wellness retreat, world-class dental care, a
+              curated adventure, or everyday personal services — Colibrí connects
+              you with vetted Colombian providers and handles everything in between.
             </motion.p>
 
             <motion.div
