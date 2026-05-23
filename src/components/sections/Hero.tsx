@@ -28,6 +28,50 @@ export default function Hero() {
         aria-hidden="true"
       />
 
+      {/* Colombia silhouette watermark */}
+      <div
+        className="absolute right-4 lg:right-[8%] top-1/2 -translate-y-1/2 pointer-events-none"
+        aria-hidden="true"
+      >
+        <svg
+          viewBox="0 0 200 230"
+          className="w-64 lg:w-80 h-auto opacity-[0.055]"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Simplified Colombia outline, clockwise from Guajira NE tip */}
+          <path d="
+            M 132 6
+            L 148 13
+            L 158 26
+            L 164 46
+            L 167 68
+            L 164 92
+            L 158 112
+            L 148 128
+            L 134 142
+            L 115 150
+            L 92 153
+            L 70 148
+            L 52 136
+            L 36 118
+            L 20 96
+            L 12 72
+            L 14 52
+            L 22 40
+            L 28 35
+            L 24 25
+            L 34 18
+            L 55 12
+            L 82 9
+            L 110 9
+            L 125 10
+            L 132 6
+            Z
+          " />
+        </svg>
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — copy */}
@@ -137,6 +181,16 @@ export default function Hero() {
             </p>
           </motion.div>
         </div>
+      </div>
+
+      {/* Colombian flag stripe accent — sits just above the wave */}
+      <div
+        className="absolute left-0 right-0 bottom-16 md:bottom-20 flex flex-col"
+        aria-hidden="true"
+      >
+        <div className="h-[3px] w-full opacity-30" style={{ backgroundColor: "#FCD116" }} />
+        <div className="h-[2px] w-full opacity-25" style={{ backgroundColor: "#003893" }} />
+        <div className="h-[2px] w-full opacity-25" style={{ backgroundColor: "#CE1126" }} />
       </div>
 
       {/* Wave divider */}
