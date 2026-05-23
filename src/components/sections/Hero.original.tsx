@@ -13,8 +13,6 @@ const TRUST_STRIP = [
   "You pay providers directly",
 ];
 
-const CITIES = ["Bogotá", "Medellín", "Cartagena", "Cali", "Santa Marta"];
-
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden gradient-hero">
@@ -100,7 +98,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-wrap gap-x-4 gap-y-2 mb-4"
+              className="flex flex-wrap gap-x-4 gap-y-2"
             >
               {TRUST_STRIP.map((item) => (
                 <span key={item} className="flex items-center gap-1.5 text-sm text-white/60">
@@ -109,16 +107,6 @@ export default function Hero() {
                 </span>
               ))}
             </motion.div>
-
-            {/* City strip */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.65 }}
-              className="text-xs text-white/30 tracking-widest uppercase"
-            >
-              {CITIES.join(" · ")}
-            </motion.p>
           </div>
 
           {/* Right — hummingbird mark */}
@@ -131,9 +119,6 @@ export default function Hero() {
             <HummingbirdLogo size={280} variant="color" animated />
             <p className="mt-6 text-white/40 text-sm font-medium tracking-widest uppercase">
               {SITE.displayName}
-            </p>
-            <p className="mt-2 text-white/20 text-xs tracking-widest uppercase">
-              Colombia, curated.
             </p>
           </motion.div>
         </div>
