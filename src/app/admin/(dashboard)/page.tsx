@@ -22,7 +22,7 @@ async function getStats() {
     _count: { _all: true },
   });
   const byCategory = Object.fromEntries(
-    byCategoryRaw.map((r) => [r.primaryCategory, r._count._all])
+    byCategoryRaw.map((r: { primaryCategory: string; _count: { _all: number } }) => [r.primaryCategory, r._count._all])
   );
 
   return { total, pending, verified, flagged, services, leads, byCategory };
