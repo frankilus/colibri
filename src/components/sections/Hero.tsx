@@ -183,14 +183,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Colombian flag stripe accent — sits just above the wave */}
+      {/* Colombian flag — vertical accent stripe on the left edge */}
       <div
-        className="absolute left-0 right-0 bottom-16 md:bottom-20 flex flex-col"
+        className="absolute left-0 top-0 bottom-0 w-[6px] flex flex-col pointer-events-none"
         aria-hidden="true"
       >
-        <div className="h-[3px] w-full opacity-30" style={{ backgroundColor: "#FCD116" }} />
-        <div className="h-[2px] w-full opacity-25" style={{ backgroundColor: "#003893" }} />
-        <div className="h-[2px] w-full opacity-25" style={{ backgroundColor: "#CE1126" }} />
+        <div className="w-full opacity-60" style={{ backgroundColor: "#FCD116", flex: 2 }} />
+        <div className="w-full opacity-55" style={{ backgroundColor: "#003893", flex: 1 }} />
+        <div className="w-full opacity-55" style={{ backgroundColor: "#CE1126", flex: 1 }} />
       </div>
 
       {/* Wave divider */}
