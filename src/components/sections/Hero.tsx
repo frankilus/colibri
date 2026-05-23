@@ -28,36 +28,6 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* South America map — Colombia highlighted */}
-      <div
-        className="hidden lg:block absolute right-0 top-1/2 -translate-y-[42%] pointer-events-none"
-        aria-hidden="true"
-      >
-        <svg
-          viewBox="0 0 270 390"
-          className="w-52 lg:w-64 h-auto opacity-[0.13]"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* South America continent outline */}
-          <path
-            d="M 38 52 Q 70 20, 122 14 Q 158 8, 178 34 Q 208 56, 228 98 Q 252 142, 252 182 Q 250 220, 236 252 Q 215 282, 190 306 Q 165 332, 136 352 Q 110 370, 85 376 Q 62 376, 46 360 Q 28 340, 18 308 Q 8 272, 8 232 Q 6 190, 10 152 Q 13 115, 22 84 Q 30 62, 38 52 Z"
-            stroke="white"
-            strokeWidth="1.5"
-            fill="white"
-            fillOpacity="0.05"
-          />
-          {/* Colombia — highlighted within the continent */}
-          <path
-            d="M 38 52 Q 70 20, 122 14 Q 142 10, 156 26 Q 164 44, 156 66 Q 144 84, 122 90 Q 100 95, 76 88 Q 52 78, 40 60 Q 37 55, 38 52 Z"
-            fill="white"
-            fillOpacity="0.28"
-            stroke="white"
-            strokeWidth="2"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
