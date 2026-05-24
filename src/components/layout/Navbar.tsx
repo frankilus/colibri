@@ -10,6 +10,7 @@ import { SITE, CATEGORIES } from "@/lib/config";
 const NAV_LINKS = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "Services", href: "/services", hasDropdown: true },
+  { label: "Savings Calculator", href: "/calculator" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
 ];
